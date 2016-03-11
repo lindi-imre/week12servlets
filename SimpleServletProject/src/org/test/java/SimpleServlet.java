@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class SimpleServlet
  */
-@WebServlet(description = "A simple servlet", urlPatterns =
-{ "/SimpleServletPath" })
+// @WebServlet(description = "A simple servlet", urlPatterns =
+// { "/SimpleServletPath" })
 public class SimpleServlet extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
@@ -41,7 +40,7 @@ public class SimpleServlet extends HttpServlet
 		// resp.getWriter().println(username);
 		// resp.getWriter().println(password);
 
-		if (username == username && password == password)
+		if (username.equals("lindi") && password.equals("imre"))
 		{
 			req.setAttribute("username", username);
 			req.setAttribute("password", password);
